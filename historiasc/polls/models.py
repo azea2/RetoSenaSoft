@@ -133,6 +133,9 @@ class Historialesclinicos(models.Model):
         managed = False
         db_table = 'historialesclinicos'
 
+    def __str__(self):
+        return "%s"%(self.idhistorialesclinicos)
+
 
 class Pacientes(models.Model):
     idpacientes = models.AutoField(primary_key=True)
@@ -142,6 +145,9 @@ class Pacientes(models.Model):
     class Meta:
         managed = False
         db_table = 'pacientes'
+
+    def __str__(self):
+        return "%s"%(self.idpacientes)
 
 
 class Profesionales(models.Model):
@@ -156,3 +162,7 @@ class Profesionales(models.Model):
     class Meta:
         managed = False
         db_table = 'profesionales'
+
+    def __str__(self):
+        return "%s"%(self.idprofesional)
+
